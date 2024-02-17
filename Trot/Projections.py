@@ -22,7 +22,7 @@ def Sinkhorn(A,r,c,precision):
         p = np.sum(A,axis = 1)
         count+=1
     
-    if count >= 4000:
+    if count >= 5000:
         print('Unable to perform Sinkhorn-Knopp projection')
     return A
     

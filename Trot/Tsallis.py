@@ -55,6 +55,7 @@ def TROT(q,M,r,c,l,precision):
 
     else:
         return KL_proj_descent(q,M,r,c,l,precision, 50, rate = 1, rate_type = "square_summable")[0]
+        
 
 
 #A TROT optimizer using first order approximations (less efficient than second order)
@@ -119,7 +120,7 @@ def second_order_sinkhorn(q,M,r,c,l,precision):
     alpha = np.zeros(M.shape[0])
     beta = np.zeros(M.shape[1])
 
-    while not (check(p,s,r,c,precision)) and count <= 1000:
+    while not (check(p,s,r,c,precision)) and count <= 2000:
 
 
         A_q2 = np.divide(P,(1+(1-q)*A))

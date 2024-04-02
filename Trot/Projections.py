@@ -14,7 +14,7 @@ def Sinkhorn(A,r,c,precision):
     q = np.sum(A,axis = 0)
     count = 0
 
-    while not (check(p,q,r,c,precision)) and count <= 4000:
+    while not (check(p,q,r,c,precision)) and count <= 5000:
         
         A = np.diag(np.divide(r,p)).dot(A)
         q = np.sum(A,axis = 0)

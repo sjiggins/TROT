@@ -43,8 +43,12 @@ def euc_costs(n,scale):
 
 # Sqaured euclidean distance using real values
 def real_euc_costs(n):
+    # Create dummy euc cost matrix
     M = np.zeros((np.shape(n)[0],np.shape(n)[0]))
+    
+    # Normalise range
+    n = ((n - np.min(n)) /  (np.max(n) - np.min(n)))
     for i,x in enumerate(n):
         for j,y in enumerate(n):
             M[i,j] = (x - y)**2
-    return M
+    return M*len(n)

@@ -211,7 +211,7 @@ def main():
                                                              scale_set))
         
 
-    quit()
+    #quit()
     # Create the plots
     kwargs={'legend.title_fontsize': 18, 
             'font.size'            : 14, 
